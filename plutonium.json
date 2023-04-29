@@ -1,19 +1,19 @@
 {
-    "_comment": "DO NOT CHANGE ANYTHING IN THIS FILE!",
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
         "version": "PTDL_v1",
-        "update_url": "https://raw.githubusercontent.com/VeloxityNL/plutoniumegg/main/plutonium.json"
+        "update_url": "https://github.com/VeloxityNL/plutoniumegg/edit/main/plutonium.json"
     },
-    "exported_at": "2023-04-29T19:03:20+00:00",
-    "name": "Plutonium",
+    "exported_at": "2023-04-29T19:21:40+00:00",
+    "name": "PlutoniumT5",
     "author": "Veloxity#0001",
-    "description": "A basic installer for Plutonium server on a Pterodactyl Panel",
+    "description": null,
     "features": null,
     "images": [
         "ghcr.io\/veloxitynl\/ptero-pluto:main"
     ],
     "file_denylist": [],
-    "startup": "bin\/plutonium-bootstrapper-win.exe {{PLUTOMODE}} \/home\/container\/Server\/{{PLUTOMODEDIR}}\/ -dedicated + start_map_rotate + set key {{PLUTOKEY}} +set net_port {{SERVER_PORT}} +set sv_config {{PLUTOCFG}}",
+    "startup": "bin\/plutonium-bootstrapper-win32.exe {{PLUTOMODE}} \/home\/container\/Server\/{{PLUTOMODEDIR}}\/ -dedicated +start_map_rotate +set key {{PLUTOKEY}} +set net_port {{SERVER_PORT}} +set sv_config {{PLUTOCFG}}",
     "config": {
         "files": "{\r\n    \"Plutonium\/T6Server.sh\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"PORT\": \"{{server.build.default.port}}\",\r\n            \"KEY\": \"{{server.build.env.PLUTOKEY}}\",\r\n            \"MODE\": \"{{server.build.env.PLUTOMODE}}\",\r\n            \"PAT\": \"\/home\/container\/Server\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Heartbeat successful\"\r\n}",
@@ -67,7 +67,7 @@
             "name": "Download File",
             "description": "The Server File this server will download and use to run plutonium.\r\nPlease use this with caution, this could enable a user to run arbitrary code which could be potentially harmful.",
             "env_variable": "SERVER_DOWNLOAD",
-            "default_value": "https:\/\/vault.our-space.xyz\/ATOM\/T5-Server.zip",
+            "default_value": "https:\/\/vault.our-space.xyz\/ATOM\/T6-Server.zip",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|url"
